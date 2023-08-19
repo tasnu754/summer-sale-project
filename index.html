@@ -1,30 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summer Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="fonts.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <header>
+    <script
+      src="https://kit.fontawesome.com/4edc683ffb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="bg-[#F9F6E2]">
+      <div class="flex flex-col lg:flex-row gap-4 mx-4 lg:mx-60 justify-around">
         <!-- Right header  -->
-        <div>
-            <p>---SALE FEVER---</p>
-            <h1>Purchase TK 200 or above & get 20% off</h1>
-            <div>
-                <p>Use Promo Code</p>
-                <button class="btn btn-secondary">SELL200</button>
-            </div>
+        <div class="w-[100%] lg:w-[600px] text-center mt-36">
+          <p class="font-medium text-3xl mb-10">---SALE FEVER---</p>
+          <h1 class="font-bold text-6xl mb-10">
+            Purchase TK 200 or <br />
+            above & get <span class="text-[#E527B2]">20% off</span>
+          </h1>
+          <div class="flex gap-4 items-center ml-4 md:ml-40 lg:ml-20">
+            <p class="font-medium text-2xl">Use Promo Code</p>
+            <button class="btn btn-secondary w-[120px] text-xl font-semibold">
+              SELL200
+            </button>
+          </div>
         </div>
 
         <!-- left header  -->
-        <div></div>
+        <div class="w-[100%] lg:w-[500px] my-10">
+          <img class=" " src="./images/Summer 1.png" alt="" />
+        </div>
+      </div>
     </header>
 
+    <main class="border-2 bg-[#F8F8F8]">
+      <!-- Main container  -->
+      <div class=" flex flex-col gap-4 lg:flex-row w-[80%] mx-auto mt-32">
+        <!-- Card section  -->
+        <div class="flex-1 ">
+          <!-- Kitchenware section  -->
+          <div class="mb-6">
+            <h2 class="text-4xl font-semibold  pb-10">Kitchenware</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <!-- First card  -->
+              <div class="card w-72 bg-base-100 shadow-xl">
+                <div
+                  class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
+                >
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="/images/prod1.png"
+                      alt="Shoes"
+                      class="rounded-xl"
+                    />
+                  </figure>
+                </div>
+                <div class="card-body items-center text-center">
+                  <div class="text-[#FFC107]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2 class="card-title text-xl font-semibold">
+                    K. Accessories
+                  </h2>
+                  <p class="text-[#11111180] font-normal text-xl">39.00 TK</p>
+                </div>
+              </div>
+
+              <!-- 2nd card  -->
+              <div class="card w-72 bg-base-100 shadow-xl">
+                <div
+                  class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
+                >
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="/images/prod2.png"
+                      alt="Shoes"
+                      class="rounded-xl"
+                    />
+                  </figure>
+                </div>
+                <div class="card-body items-center text-center">
+                  <div class="text-[#FFC107]">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2 class="card-title text-xl font-semibold">
+                    K. Accessories
+                  </h2>
+                  <p class="text-[#11111180] font-normal text-xl">25.00 TK</p>
+                </div>
+              </div>
+
+              <!-- 3rd card  -->
+              <div class="card w-72 bg-base-100 shadow-xl">
+                <div
+                  class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
+                >
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="/images/prod3.png"
+                      alt="Shoes"
+                      class="rounded-xl"
+                    />
+                  </figure>
+                </div>
+                <div class="card-body items-center text-center">
+                  <div class="text-[#FFC107]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2 class="card-title text-xl font-semibold">
+                    Home Cooker
+                  </h2>
+                  <p class="text-[#11111180] font-normal text-xl">49.00 TK</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sportswear section  -->
+          <div class="mb-12">
+            <h2 class="text-4xl font-semibold pt-32 pb-10">Sportswear</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <!-- 4th card  -->
+              <div class="card w-72 bg-base-100 shadow-xl">
+                <div
+                  class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
+                >
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="/images/prod4.png"
+                      alt="Shoes"
+                      class="rounded-xl"
+                    />
+                  </figure>
+                </div>
+                <div class="card-body items-center text-center">
+                  <div class="text-[#FFC107]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2 class="card-title text-xl font-semibold">
+                    Sports Back Cap
+                  </h2>
+                  <p class="text-[#11111180] font-normal text-xl">49.00 TK</p>
+                </div>
+              </div>
+
+              <!-- 5th card  -->
+              <div class="card w-72 bg-base-100 shadow-xl">
+                <div
+                  class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
+                >
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="/images/prod5.png"
+                      alt="Shoes"
+                      class="rounded-xl"
+                    />
+                  </figure>
+                </div>
+                <div class="card-body items-center text-center">
+                  <div class="text-[#FFC107]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2 class="card-title text-xl font-semibold">
+                    Full Jersey Set
+                  </h2>
+                  <p class="text-[#11111180] font-normal text-xl">69.00 TK</p>
+                </div>
+              </div>
+
+              <!-- 6th card  -->
+              <div class="card w-72 bg-base-100 shadow-xl">
+                <div
+                  class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
+                >
+                  <figure class="px-10 pt-10">
+                    <img
+                      src="/images/prod6.png"
+                      alt="Shoes"
+                      class="rounded-xl"
+                    />
+                  </figure>
+                </div>
+                <div class="card-body items-center text-center">
+                  <div class="text-[#FFC107]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <h2 class="card-title text-xl font-semibold">
+                    Sports cates
+                  </h2>
+                  <p class="text-[#11111180] font-normal text-xl">159.00 TK</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Purchase section  -->
+        <div class=" md:w-[80%] lg:w-[342px] md:pl-32 lg:pl-0 mt-20">
+          <div class="bg-white p-6 rounded-md">
+            <h2 class="text-2xl font-medium mb-4">Have coupon?</h2>
+            <div class="flex">
+              <input class="text-[#11111180] border-2 border-grey-[#11111180] rounded-md rounded-r-none text-center" type="text" name="" id="" placeholder="Coupon code">
+              <button class="btn btn-secondary w-[100px] rounded-l-none text-xl font-semibold">
+                Apply
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-md my-4 ">
+            <hr>
+            <h2 class="text-2xl font-medium mt-4">Total price: <span class="text-[#11111180]">00</span> <span class="text-[#11111180]">TK</span> </h2>
+            <h2 class="text-2xl font-medium mt-4">Discount: <span class="text-[#11111180]">00</span> <span class="text-[#11111180]">TK</span> </h2>
+            <h2 class="text-2xl font-medium mt-4">Total: <span class="text-[#11111180]">00</span> <span class="text-[#11111180]">TK</span> </h2>
+
+            <button class="btn btn-secondary mt-4 ml-8  text-xl font-semibold">
+              Make Purchase
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </main>
 
     <script src="summer.js"></script>
-</body>
+  </body>
 </html>
