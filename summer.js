@@ -17,6 +17,10 @@ function cardClick(target){
     const totalPriceFinal = totalPriceInt;
     // console.log(typeof totalPriceFinal);
 
+    const finalTotal = document.getElementById('final-total');
+    const finalTotalVal = finalTotal.innerText;
+    const finalTotalInt = parseFloat(finalTotalVal);
+
     const itemCost = target.childNodes[3].childNodes[5].childNodes[1];
     const itemCost1 = itemCost.innerText;
     const itemCostVal = parseFloat(itemCost1);
@@ -26,26 +30,67 @@ function cardClick(target){
     const totalPrice2 = parseFloat(totalPrice1)
     totalPrice.innerText = totalPrice2.toFixed(2);
 
+    const finalTotal1 = finalTotalInt + itemCostVal;
+    const finalTotal2 = parseFloat(finalTotal1);
+    finalTotal.innerText = finalTotal2.toFixed(2);
+
+
+
     const purchaseBtn = document.getElementById('purchase-btn');
+    const applybtn = document.getElementById('apply-btn');
 
 
     if(totalPrice.innerText > 0){
         purchaseBtn.removeAttribute('disabled');
     }
+
+    if(totalPrice.innerText >= 200){
+        applybtn.removeAttribute('disabled');
+    }
     
    
 }
 
-document.getElementById('input-code').addEventListener('keyup' , function(event){
-    const code = event.target.value;
 
-    const applybtn = document.getElementById('apply-btn');
+
+document.getElementById('apply-btn').addEventListener('click' , function(){
+    const inputremove = document.getElementById('input-code');
+    const code = inputremove.value;
+    inputremove.value = '';
+
+    const totalPrice = document.getElementById('total-price');
+    const totalVal = totalPrice.innerText;
+    const totalPriceInt = parseFloat(totalVal);
+    const totalPriceFinal = totalPriceInt;
 
     if(code == 'SELL200'){
-        applybtn.removeAttribute('disabled');
+        const dis = document.getElementById('dis');
+
+        const discount = 0.2 * totalPriceFinal;
+        dis.innerText = discount.toFixed(2);
+
+        const finalTotal = document.getElementById('final-total');
+       
+
+        const finalTotalLast = totalPriceFinal - discount;
+        finalTotal.innerText = finalTotalLast.toFixed(2);
+
     }
     else{
-        applybtn.setAttribute('disabled' , true);
+        alert("Please enter correct code");
     }
-
 })
+
+function goHome(){
+    const totalPrice = document.getElementById('total-price');
+    totalPrice.innerText = '00';
+
+    const finalTotal = document.getElementById('final-total');
+    finalTotal.innerText = '00';
+
+    const list = document.getElementById('list');
+    list.removeChild(list.children[0]);
+
+    location.href = 'index.html';
+
+}
