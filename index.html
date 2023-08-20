@@ -58,7 +58,7 @@
             <h2 class="text-4xl font-semibold  pb-10">Kitchenware</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <!-- First card  -->
-              <div class="card w-72 bg-base-100 shadow-xl">
+              <div class="card w-72 bg-base-100 shadow-xl" id="card1" onclick="cardClick(this)">
                 <div
                   class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
                 >
@@ -81,12 +81,12 @@
                   <h2 class="card-title text-xl font-semibold">
                     K. Accessories
                   </h2>
-                  <p class="text-[#11111180] font-normal text-xl">39.00 TK</p>
+                  <p class="text-[#11111180] font-normal text-xl"> <span>39.00</span> TK</p>
                 </div>
               </div>
 
               <!-- 2nd card  -->
-              <div class="card w-72 bg-base-100 shadow-xl">
+              <div class="card w-72 bg-base-100 shadow-xl" onclick="cardClick(this)">
                 <div
                   class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
                 >
@@ -109,12 +109,12 @@
                   <h2 class="card-title text-xl font-semibold">
                     K. Accessories
                   </h2>
-                  <p class="text-[#11111180] font-normal text-xl">25.00 TK</p>
+                  <p class="text-[#11111180] font-normal text-xl"> <span>25.00</span> TK</p>
                 </div>
               </div>
 
               <!-- 3rd card  -->
-              <div class="card w-72 bg-base-100 shadow-xl">
+              <div class="card w-72 bg-base-100 shadow-xl" onclick="cardClick(this)">
                 <div
                   class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
                 >
@@ -137,7 +137,7 @@
                   <h2 class="card-title text-xl font-semibold">
                     Home Cooker
                   </h2>
-                  <p class="text-[#11111180] font-normal text-xl">49.00 TK</p>
+                  <p class="text-[#11111180] font-normal text-xl"> <span>49.00</span> TK</p>
                 </div>
               </div>
             </div>
@@ -148,7 +148,7 @@
             <h2 class="text-4xl font-semibold pt-32 pb-10">Sportswear</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <!-- 4th card  -->
-              <div class="card w-72 bg-base-100 shadow-xl">
+              <div class="card w-72 bg-base-100 shadow-xl" onclick="cardClick(this)">
                 <div
                   class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
                 >
@@ -171,12 +171,12 @@
                   <h2 class="card-title text-xl font-semibold">
                     Sports Back Cap
                   </h2>
-                  <p class="text-[#11111180] font-normal text-xl">49.00 TK</p>
+                  <p class="text-[#11111180] font-normal text-xl"> <span>49.00</span> TK</p>
                 </div>
               </div>
 
               <!-- 5th card  -->
-              <div class="card w-72 bg-base-100 shadow-xl">
+              <div class="card w-72 bg-base-100 shadow-xl" onclick="cardClick(this)">
                 <div
                   class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
                 >
@@ -199,12 +199,12 @@
                   <h2 class="card-title text-xl font-semibold">
                     Full Jersey Set
                   </h2>
-                  <p class="text-[#11111180] font-normal text-xl">69.00 TK</p>
+                  <p class="text-[#11111180] font-normal text-xl"> <span>69.00</span> TK</p>
                 </div>
               </div>
 
               <!-- 6th card  -->
-              <div class="card w-72 bg-base-100 shadow-xl">
+              <div class="card w-72 bg-base-100 shadow-xl" onclick="cardClick(this)">
                 <div
                   class="bg-[#1111110D] w-[90%] mx-auto mt-5 pb-8 rounded-md"
                 >
@@ -227,7 +227,7 @@
                   <h2 class="card-title text-xl font-semibold">
                     Sports cates
                   </h2>
-                  <p class="text-[#11111180] font-normal text-xl">159.00 TK</p>
+                  <p class="text-[#11111180] font-normal text-xl"> <span>159.00</span> TK</p>
                 </div>
               </div>
             </div>
@@ -239,22 +239,27 @@
           <div class="bg-white p-6 rounded-md">
             <h2 class="text-2xl font-medium mb-4">Have coupon?</h2>
             <div class="flex">
-              <input class="text-[#11111180] border-2 border-grey-[#11111180] rounded-md rounded-r-none text-center" type="text" name="" id="" placeholder="Coupon code">
-              <button class="btn btn-secondary w-[100px] rounded-l-none text-xl font-semibold">
+              <input id="input-code" class="text-[#11111180] border-2 border-grey-[#11111180] rounded-md rounded-r-none text-center" type="text" name="" id="" placeholder="Coupon code">
+              <button id="apply-btn" class="btn btn-secondary w-[100px] rounded-l-none text-xl font-semibold" disabled>
                 Apply
               </button>
             </div>
           </div>
 
           <div class="bg-white p-6 rounded-md my-4 ">
+            <div class="mb-4" id="item-list">
+
+            </div>
             <hr>
-            <h2 class="text-2xl font-medium mt-4">Total price: <span class="text-[#11111180]">00</span> <span class="text-[#11111180]">TK</span> </h2>
-            <h2 class="text-2xl font-medium mt-4">Discount: <span class="text-[#11111180]">00</span> <span class="text-[#11111180]">TK</span> </h2>
+            <h2 class="text-2xl font-medium mt-4">Total price: 
+              <span class="text-[#11111180]" id="total-price">00</span> <span class="text-[#11111180]">TK</span> </h2>
+            <h2 class="text-2xl font-medium mt-4">Discount: 
+              <span class="text-[#11111180]">00</span> <span class="text-[#11111180]">TK</span> </h2>
             <h2 class="text-2xl font-medium mt-4 mb-4">Total: <span class="text-[#11111180]">00</span> <span class="text-[#11111180]">TK</span> </h2>
 
             <hr>
 
-            <button class="btn btn-secondary mt-4 ml-8  text-xl font-semibold">
+            <button id="purchase-btn" class="btn btn-secondary mt-4 ml-8  text-xl font-semibold" disabled>
               Make Purchase
             </button>
           </div>
